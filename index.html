@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Failure Forecaster & Trade-Off Engine</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container app-container">
+      <header class="hero-section">
+        <h1 class="main-title">
+          <span>Failure Forecaster</span><span> & Trade-Off Engine</span>
+        </h1>
+        <p class="sub-title">
+          Enter a skill, career, or project idea to reveal hidden risks and
+          strategic trade-offs.
+        </p>
+      </header>
+
+      <section class="search-card">
+        <form id="forecasterForm">
+          <div class="user-context">
+            <div class="selector-group">
+              <span>I am focused on a:</span>
+              <div class="chip-group" id="typeGroup">
+                <button type="button" class="chip active" data-value="Career">
+                  Career
+                </button>
+                <button type="button" class="chip" data-value="Skill">
+                  Skill
+                </button>
+                <button type="button" class="chip" data-value="Project">
+                  Project
+                </button>
+              </div>
+            </div>
+            <div class="selector-group">
+              <span>My level:</span>
+              <div class="chip-group" id="levelGroup">
+                <button type="button" class="chip active" data-value="Fresher">
+                  Fresher/Beginner
+                </button>
+                <button type="button" class="chip" data-value="Experienced">
+                  Experienced Pro
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="input-wrapper">
+            <textarea
+              id="userInput"
+              placeholder="Enter your specific goal (e.g. Senior Java Developer, Learning Rust, Crypto App)..."
+              rows="1"
+            ></textarea>
+          </div>
+
+          <button type="submit" id="submitBtn">
+            <span>Forecast Failure</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+          </button>
+        </form>
+      </section>
+
+      <div id="outputArea" class="output-area">
+        <p class="placeholder-text">
+          Your structured failure forecast, trade-off analysis, and roadmap will
+          appear here.
+        </p>
+
+        <div id="forecastResults"></div>
+
+        <div id="tradeoffSection" style="display: none; margin-top: 50px">
+          <div class="section-title">Strategic Trade-off Analysis</div>
+          <table id="tradeoffTable">
+            <thead>
+              <tr>
+                <th>Area</th>
+                <th>What You Gain</th>
+                <th>What You Give Up</th>
+                <th>Risk Level</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+
+        <div id="roadmapSection" style="display: none; margin-top: 50px">
+          <div class="section-title">Step-by-Step Execution Plan</div>
+          <div class="roadmap-wrapper">
+            <div id="roadmapContainer" class="roadmap-timeline"></div>
+          </div>
+
+          <div id="solution" class="solution-card">
+            <div class="strategy-badge">Strategic Recommendation</div>
+            <p id="solutionText"></p>
+          </div>
+        </div>
+      </div>
+      <br /><br />
+
+      <div
+        id="journeyAction"
+        style="
+          display: none;
+          text-align: center;
+          margin-top: 40px;
+          padding-bottom: 40px;
+        "
+      >
+        <button id="startJourneyBtn" class="primary-btn pulse">
+          Let's Start the Journey
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M5 12h14" />
+            <path d="m12 5 7 7-7 7" />
+          </svg>
+        </button>
+        <br /><br /><br />
+      </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
