@@ -19,4 +19,4 @@ This project requires a **Gemini 3 Flash** API Key.
 2. Open `config.js` in your project root.
 3. Replace the placeholder with your key:
    ```javascript
-   export const GEMINI_API_KEY = "AIzaSy...";
+   export const GEMINI_API_KEY = "ADD YOUR API...";
